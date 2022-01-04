@@ -7,29 +7,54 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_hello"
+        android:id="@+id/tv_random"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"
+        android:text="0.00"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.133" />
 
-    <Button
-        android:id="@+id/btn_kor"
+    <TextView
+        android:id="@+id/tv_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="번역기"
+        android:text="0.00"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.385" />
+
+    <TextView
+        android:id="@+id/tv_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <Button
+        android:id="@+id/btn_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작/정지"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hello"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_random"
+        app:layout_constraintVertical_bias="0.754" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
