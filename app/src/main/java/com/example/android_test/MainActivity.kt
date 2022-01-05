@@ -8,9 +8,18 @@ import java.lang.Math.abs
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    //메인함수
+    fun main(){
+        //xml 파일의 레이아웃을 불러와라
+        setContentView(R.layout.activity_main)
+
+
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        main()
+
         //1.hell 텍스트를 "안녕"으로 변환
         //2.시간 표시 로직 적용하기
         var sec : Int = 0
@@ -43,7 +52,6 @@ class MainActivity : AppCompatActivity() {
                                 //소수점 2까지 나오게하기
                          tv_t.text = (sec.toFloat()/100).toString()
                      }
-
                  }
              }else {
                  //타이머 멈추기
