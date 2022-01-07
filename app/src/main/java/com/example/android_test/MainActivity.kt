@@ -6,12 +6,36 @@ import android.widget.Button
 import android.widget.TextView
 import java.lang.Math.abs
 import java.util.*
-import kotlin.concurrent.timer
 
 class MainActivity : AppCompatActivity() {
     var p_num = 3
     var k = 1
     val point_list = mutableListOf<Float>()
+        //시작페이지
+    fun start(){
+        setContentView(R.layout.activity_start)
+            val tv_pnum:TextView = findViewById(R.id.tv_pnum)
+            val btn_minus:Button = findViewById(R.id.btn_minus)
+            val btn_plus:Button = findViewById(R.id.btn_plus)
+            val btn_start:Button = findViewById(R.id.btn_start)
+            tv_pnum.text = p_num.toString()
+            btn_minus.setOnClickListener {
+                p_num--
+                if(p_num == 0) {
+                    p_num = 1
+                }
+                tv_pnum.text = p_num.toString()
+            }
+            btn_plus.setOnClickListener {
+                p_num ++
+                tv_pnum.text = p_num.toString()
+            }
+            btn_start.setOnClickListener {
+                main()
+            }
+
+    }
+
     //메인함수
     fun main(){
         //xml 파일의 레이아웃을 불러와라
@@ -24,10 +48,10 @@ class MainActivity : AppCompatActivity() {
         var stage = 1
         var sec : Int = 0
         val tv:TextView = findViewById(R.id.tv_random)
-        val tv_t:TextView = findViewById(R.id.tv_timer)
+        val tv_t:TextView = findViewById(R.id.tv_pnum)
         val tv_p:TextView = findViewById(R.id.tv_point)
         val tv_people:TextView = findViewById(R.id.tv_people)
-        val btn:Button = findViewById(R.id.btn_main)
+        val btn:Button = findViewById(R.id.btn_start)
         val random_box = Random()  //랜덤함수 사용하기
         val num = random_box.nextInt(1001) // 0부터 1000까지
 
@@ -56,15 +80,33 @@ class MainActivity : AppCompatActivity() {
                     k++
                     main()
                 } else {
-                    println(point_list)
+                    end()
                 }
 
             }
         }
     }
+
+    fun end(){
+        setContentView(R.layout.activity_end)
+        val tv_last:TextView = findViewById(R.id.tv_last)
+        val tv_lpoint:TextView = findViewById(R.id.tv_lpoint)
+        val btn_init:Button = findViewById(R.id.btn_init)
+
+        tv_lpoint.text = (point_list.maxOrNull()).toString()
+        var index_last = point_list.indexOf(point_list.maxOrNull())
+        tv_last.text = "참가자" + (index_last+1).toString()
+
+        btn_init.setOnClickListener {
+            point_list.clear()
+            k = 1
+            start()
+        }
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        main()
+        start()
 
     }
 }
