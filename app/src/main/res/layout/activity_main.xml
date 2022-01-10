@@ -81,7 +81,7 @@
         app:layout_constraintVertical_bias="0.572" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_blind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="시작/정지"
@@ -91,6 +91,18 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_random"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintVertical_bias="0.472" />
+
+    <Button
+        android:id="@+id/btn_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음으로"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_random"
+        app:layout_constraintVertical_bias="0.762" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
