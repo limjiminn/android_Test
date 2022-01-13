@@ -1,9 +1,11 @@
 package com.example.android_test
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import java.lang.Math.abs
 import java.util.*
 
@@ -67,6 +69,16 @@ class MainActivity : AppCompatActivity() {
         val btn_i:Button = findViewById(R.id.btn_i)
         val random_box = Random()  //랜덤함수 사용하기
         val num = random_box.nextInt(1001) // 0부터 1000까지
+        val bg_main : ConstraintLayout = findViewById(R.id.bg_main)
+
+        val color_list = mutableListOf<String>("#A6FF0707","#A6FF8707","#A6FFD607","#A65EFF07","#A60745FF","#A67B07FF","#A6DA07FF")
+
+        var color_index = k%7-1
+        if(color_index == -1){
+            color_index = 6
+        }
+        val color_sel = color_list.get(color_index)
+            bg_main.setBackgroundColor(Color.parseColor(color_sel))
 
         tv.text = (num.toFloat()/100).toString()
         btn.text = "시작"

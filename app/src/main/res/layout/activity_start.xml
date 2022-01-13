@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFEB3B"
     tools:context=".MainActivity">
 
     <TextView
@@ -32,6 +33,7 @@
         android:id="@+id/btn_blind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
         android:text="BLIND모드 OFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
+        android:backgroundTint="#03A9F4"
         android:text="시작"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
+        android:backgroundTint="#4CAF50"
         android:text="-"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,6 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
+        android:backgroundTint="#4CAF50"
         android:text="+"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
