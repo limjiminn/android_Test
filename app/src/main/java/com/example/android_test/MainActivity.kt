@@ -90,6 +90,7 @@ class MainActivity : AppCompatActivity() {
             start()
         }
 
+
         btn.setOnClickListener {
             stage++
             if (stage == 2) {
