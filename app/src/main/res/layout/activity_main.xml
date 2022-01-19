@@ -84,6 +84,7 @@
 
     <Button
         android:id="@+id/btn_blind"
+        style="@style/customButtonFontStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#03A9F4"
@@ -98,6 +99,7 @@
 
     <Button
         android:id="@+id/btn_i"
+        style="@style/customButtonFontStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#673AB7"
