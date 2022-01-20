@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import java.lang.Math.abs
 import java.util.*
 
@@ -17,6 +20,12 @@ class MainActivity : AppCompatActivity() {
         //시작페이지
     fun start(){
         setContentView(R.layout.activity_start)
+
+            MobileAds.initialize(this) {}
+            val adview3 : AdView = findViewById(R.id.adView3)
+            val adRequest = AdRequest.Builder().build()
+            adview3.loadAd(adRequest)
+
             val tv_pnum:TextView = findViewById(R.id.tv_pnum)
             val btn_minus:Button = findViewById(R.id.btn_minus)
             val btn_plus:Button = findViewById(R.id.btn_plus)
@@ -54,6 +63,11 @@ class MainActivity : AppCompatActivity() {
     fun main(){
         //xml 파일의 레이아웃을 불러와라
         setContentView(R.layout.activity_main)
+
+        MobileAds.initialize(this) {}
+        val adview2 : AdView= findViewById(R.id.adView2)
+        val adRequest = AdRequest.Builder().build()
+        adview2.loadAd(adRequest)
 
         //1.hell 텍스트를 "안녕"으로 변환
         //2.시간 표시 로직 적용하기
@@ -128,6 +142,12 @@ class MainActivity : AppCompatActivity() {
 
     fun end(){
         setContentView(R.layout.activity_end)
+
+        MobileAds.initialize(this) {}
+        val adview : AdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        adview.loadAd(adRequest)
+
         val tv_last:TextView = findViewById(R.id.tv_last)
         val tv_lpoint:TextView = findViewById(R.id.tv_lpoint)
         val btn_init:Button = findViewById(R.id.btn_init)
