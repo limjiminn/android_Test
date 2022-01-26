@@ -1,4 +1,4 @@
-package com.example.android_test
+package com.game.android_test
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
